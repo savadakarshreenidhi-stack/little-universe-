@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffe6f0">
+<title>Devi Ji's Little Universe 🎀</title>
+<style>
+:root{--pink:#f06fa6;--deep:#a83e70;--soft:#fff0f6;--ink:#713b55;--card:#fffafd;--line:#ffd0e2;--cream:#fff8f1}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 10% 5%,#ffe2ef 0,transparent 30%),radial-gradient(circle at 90% 35%,#fce8ff 0,transparent 28%),#fff7fb;color:var(--ink);font-family:"Trebuchet MS",Arial,sans-serif;line-height:1.6}
+button,input,textarea{font:inherit}
+button{cursor:pointer}
+.topbar{position:sticky;top:0;z-index:10;background:#fff8f1eF;border-bottom:1px solid var(--line);backdrop-filter:blur(10px);padding:10px 4%;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{font-weight:900;color:var(--deep);letter-spacing:.3px}
+.nav{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}
+.nav a{font-size:.85rem;text-decoration:none;color:var(--deep);padding:6px 10px;border-radius:20px;background:#ffe8f1}
+main{width:min(980px,92%);margin:0 auto}
+section{scroll-margin-top:90px;margin:24px 0}
+.hero{margin-top:26px;text-align:center;padding:clamp(28px,7vw,64px) 18px;background:linear-gradient(145deg,#ffe0ed,#fff7fb 60%,#f8e8ff);border:2px solid #ffd0e2;border-radius:34px;position:relative;overflow:hidden}
+.hero:before,.hero:after{content:"✦";position:absolute;color:#f3a0c2;font-size:2rem;opacity:.8}.hero:before{top:18px;left:24px}.hero:after{right:25px;bottom:22px}
+.eyebrow{letter-spacing:2px;text-transform:uppercase;font-size:.75rem;font-weight:900;color:#b85882}
+h1{font-size:clamp(2.2rem,8vw,4.5rem);line-height:1.05;color:#c84e85;margin:14px 0}
+h2{color:#c84e85;line-height:1.2}
+h3{margin:.4rem 0;color:#a83e70}
+p{margin:.7rem 0}
+.bear{font-size:4.5rem;display:inline-block;animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-8px) rotate(2deg)}}
+.btn{border:0;border-radius:24px;padding:12px 18px;background:var(--pink);color:white;font-weight:800;box-shadow:0 5px 0 #d65b91;transition:transform .15s,filter .15s;margin:5px}
+.btn:hover{transform:translateY(-2px);filter:saturate(1.1)}
+.btn.secondary{background:#ffe1ee;color:#94436a;box-shadow:0 5px 0 #f4bfd5}
+.btn.light{background:#fff;color:#a83e70;box-shadow:0 5px 0 #f1c5d7}
+.card{background:var(--card);border:1.5px solid var(--line);border-radius:26px;padding:clamp(18px,4vw,30px);box-shadow:0 10px 28px #c95b8610}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:16px}
+.center{text-align:center}
+.tag{display:inline-block;background:#ffe6f0;color:#a83e70;padding:5px 10px;border-radius:20px;font-size:.8rem;font-weight:800}
+.note-box{background:#fff2f7;border:1px dashed #e89abc;border-radius:18px;padding:20px;margin:16px 0;min-height:100px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:1.05rem}
+.envelopes{display:grid;grid-template-columns:repeat(auto-fit,minmax(72px,1fr));gap:8px;margin-top:18px}
+.env{border:1px solid #f2b4ce;background:#fff0f6;border-radius:14px;padding:12px 4px;color:#a83e70;font-size:1.4rem;min-height:70px}
+.env small{display:block;font-size:.65rem;font-weight:800}
+.env.opened{background:#f8e8ff;border-style:solid}
+label{display:block;font-weight:800;font-size:.9rem;margin:12px 0 5px}
+input[type=text],input[type=url],textarea{width:100%;border:1px solid #efbad0;border-radius:13px;padding:11px;background:white;color:var(--ink)}
+textarea{min-height:95px;resize:vertical}
+audio{width:100%;margin-top:10px}
+.playlist-card{background:linear-gradient(135deg,#fff0f6,#f8efff);border-radius:20px;padding:18px}
+.secret{border:2px dashed #f0a5c4;background:#fff7fb;border-radius:20px;padding:18px}
+footer{text-align:center;padding:30px 14px;color:#a35c7c;font-size:.9rem}
+.floating{position:fixed;top:-35px;z-index:30;pointer-events:none;animation:fall 4s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(330deg);opacity:0}}
+.muted{font-size:.88rem;color:#98647d}
+.hidden{display:none!important}
+hr{border:0;border-top:1px dashed #efbad0;margin:22px 0}
+@media(max-width:580px){.topbar{align-items:flex-start;flex-direction:column}.nav{justify-content:flex-start}.nav a{font-size:.78rem}.hero{border-radius:24px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="brand">🎀 Devi Ji's Little Universe</div>
+  <nav class="nav" aria-label="Main navigation">
+    <a href="#case">The case</a><a href="#notes">Love notes</a><a href="#voice">Voice notes</a><a href="#songs">Playlist</a><a href="#finale">The finale</a>
+  </nav>
+</div>
+<main>
+  <section class="hero" id="home">
+    <div class="bear" aria-hidden="true">🧸</div>
+    <div class="eyebrow">A top-secret delivery for one very special human</div>
+    <h1>Helloooo,<br>Devi Ji! 💗</h1>
+    <p>Someone has prepared a tiny universe for you.<br>It contains approximately 73% love, 26% nonsense, and 1% suspicious teddy-bear activity.</p>
+    <p><span class="tag">CLASSIFIED: CUTENESS LEVEL EXTREME</span></p>
+    <button class="btn" id="openGift">Open your gift 🎁</button>
+    <button class="btn secondary" id="heartsTop">Cause a heart emergency 💕</button>
+    <p class="muted">Best explored slowly. The teddy bear has absolutely no professional qualifications.</p>
+  </section>
+
+  <section id="case" class="card">
+    <div class="center"><span class="tag">CASE FILE No. 001</span><h2>🚨 The Official Cuteness Investigation 🚨</h2></div>
+    <p>Devi Ji, you are accused of the following extremely serious crimes:</p>
+    <div class="grid">
+      <div class="playlist-card">💗 <b>Unlicensed adorableness</b><br>Being cute without carrying the appropriate permit.</div>
+      <div class="playlist-card">🧠 <b>Thought occupation</b><br>Taking up a frankly unreasonable amount of one boy's brain space.</div>
+      <div class="playlist-card">😂 <b>Laugh theft</b><br>Making someone smile at their phone like a total goofball.</div>
+      <div class="playlist-card">🧸 <b>Teddy bear conspiracy</b><br>Recruiting innocent plushies to support your case.</div>
+    </div>
+    <div class="center" style="margin-top:18px">
+      <button class="btn" id="verdictBtn">Reveal the verdict ⚖️</button>
+      <div id="verdict" class="note-box hidden" aria-live="polite">GUILTY. 😭💗 Your sentence is unlimited appreciation, silly conversations, and permanent membership in the Devi Ji Fan Club. Appeals are accepted but will be ignored for being too adorable.</div>
+    </div>
+  </section>
+
+  <section id="notes" class="card">
+    <div class="center"><span class="tag">100 TINY SURPRISES</span><h2>💌 The Little Love-Note Jar</h2>
+      <p>Pick a number, or let the jar surprise you. Every note is a little reminder that you matter.</p>
+      <button class="btn" id="randomNote">Surprise me 💝</button>
+      <div class="note-box" id="noteDisplay" aria-live="polite">Your first tiny surprise is waiting here, Devi Ji. 🎀</div>
+      <p class="muted">Tap any envelope below. Opened notes get a little sparkle.</p>
+    </div>
+    <div class="envelopes" id="envelopes" aria-label="100 love notes"></div>
+  </section>
+
+  <section id="voice" class="card">
+    <div class="center"><span class="tag">A MESSAGE FROM YOUR HUMAN</span><h2>🎙️ Voice-note corner</h2>
+      <p>These are ready for your boyfriend to personalize. Record your messages on your phone or computer, then add the audio files below when you're ready.</p>
+    </div>
+    <div class="grid">
+      <div class="playlist-card"><h3>🥺 Open when you're sad</h3><p class="muted">A gentle reminder that she doesn't have to pretend to be okay.</p><label for="audioSad">Choose audio file</label><input type="file" id="audioSad" accept="audio/*"><audio id="playerSad" controls class="hidden"></audio></div>
+      <div class="playlist-card"><h3>😂 Open when you need a laugh</h3><p class="muted">Deliver your finest nonsense. Dignity is optional.</p><label for="audioFunny">Choose audio file</label><input type="file" id="audioFunny" accept="audio/*"><audio id="playerFunny" controls class="hidden"></audio></div>
+      <div class="playlist-card"><h3>💗 Open when you miss me</h3><p class="muted">Say something only you could say to her.</p><label for="audioMiss">Choose audio file</label><input type="file" id="audioMiss" accept="audio/*"><audio id="playerMiss" controls class="hidden"></audio></div>
+      <div class="playlist-card"><h3>🥹 The secret message</h3><p class="muted">Save your most heartfelt recording for this one.</p><label for="audioSecret">Choose audio file</label><input type="file" id="audioSecret" accept="audio/*"><audio id="playerSecret" controls class="hidden"></audio></div>
+    </div>
+    <p class="muted">Important: choosing files here previews them only in your current browser. To make the recordings available to Devi Ji online, the audio files must also be uploaded to the website repository and linked in the code. Don't upload private recordings unless you're comfortable with the repository's visibility.</p>
+  </section>
+
+  <section id="songs" class="card">
+    <div class="center"><span class="tag">OUR LITTLE SOUNDTRACK</span><h2>🎧 Songs that remind me of you</h2>
+    <p>Add your playlist link and a few song dedications. The playlist button will open it for her.</p></div>
+    <label for="playlistLink">Your playlist link</label>
+    <input type="url" id="playlistLink" placeholder="Paste a Spotify / YouTube playlist URL">
+    <div class="center"><button class="btn" id="savePlaylist">Set playlist link 🎶</button><a id="playlistButton" class="btn secondary hidden" href="#" target="_blank" rel="noopener">Open our playlist 💗</a></div>
+    <div class="grid">
+      <div class="playlist-card"><h3>🌷 Track 01 — The beginning</h3><p>A song that reminds you of how it all started.</p></div>
+      <div class="playlist-card"><h3>🌙 Track 02 — Missing you</h3><p>A song for those long-distance moments.</p></div>
+      <div class="playlist-card"><h3>💞 Track 03 — Just us</h3><p>Your “this is so us” song.</p></div>
+    </div>
+    <p class="muted">The link you set here is temporary in this browser. To put your chosen link permanently on the published page, it will need to be added to the HTML before uploading.</p>
+  </section>
+
+  <section id="memories" class="card">
+    <div class="center"><span class="tag">OUR STORY</span><h2>📸 Tiny memory museum</h2><p>Use this space to write an inside joke, a favourite moment, or a memory that makes you smile.</p></div>
+    <label for="memoryTitle">Memory title</label><input id="memoryTitle" type="text" placeholder="e.g. The day we laughed for no reason">
+    <label for="memoryText">Your memory</label><textarea id="memoryText" placeholder="Write your memory here..."></textarea>
+    <div class="center"><button class="btn" id="addMemory">Add to the museum 🖼️</button></div>
+    <div id="memoryList" class="grid"></div>
+    <p class="muted">Memories added here stay only in this open page; add your favourite ones to the HTML if you want them to appear for her online.</p>
+  </section>
+
+  <section id="finale" class="card">
+    <div class="center"><span class="tag">FINAL ENVELOPE</span><h2>🥹 Okay, jokes aside...</h2>
+      <div class="bear">🐻💗</div>
+      <p>My adorable Devi Ji,</p>
+      <p>More than a year has passed, and I still love the little things that make you <b>you</b>—your cute side, your silly side, your emotional side, and all the tiny moments that might seem ordinary to you but mean a lot to me.</p>
+      <p>I might annoy you, tease you, or sometimes struggle to find the perfect words. But I hope you never feel you have to be anything other than yourself with me. You deserve kindness on difficult days, laughter on ordinary days, and reminders that you're appreciated even when nothing special is happening.</p>
+      <p>This little universe isn't perfect, but it was made with you in mind. If it makes you smile, then every silly teddy bear in it has done its job. ❤️</p>
+      <button class="btn" id="finalButton">Unlock one last surprise 🔐</button>
+      <div id="finalSecret" class="secret hidden" aria-live="polite">
+        <h3>💌 A tiny promise</h3>
+        <p>I can't promise every day will be perfect, but I can keep choosing honesty, care, laughter, and effort. Thank you for being part of my world, Devi Ji. You are loved—not just on special days, but in the little everyday moments too. 🎀</p>
+        <p><b>Signed with all my affection, your favourite little menace. 💗</b></p>
+      </div>
+      <button class="btn secondary" id="finalHearts">One last shower of hearts 💕</button>
+    </div>
+  </section>
+</main>
+<footer>Made for Devi Ji with 💗, a questionable number of teddy bears, and absolutely no budget.<br><span class="muted">A little universe can hold a lot of love.</span></footer>
+<script>
+const notes = [
+"Breaking news: Devi Ji remains ridiculously adorable. Experts are confused. 🧸",
+"Your smile deserves its own tiny holiday. 🎀",
+"You are my favourite notification. Please do not become too powerful. 😭",
+"If cuteness were a crime, this website would be evidence. ⚖️",
+"Thank you for being your wonderfully specific self. 💗",
+"Virtual hug delivery is in progress. Please allow 3–5 business seconds. 🤗",
+"Somehow, even an ordinary conversation with you can become a favourite memory.",
+"I hope today gives you at least one tiny reason to smile. 🌷",
+"Your silly side is precious. Never feel you have to hide it around me.",
+"Official teddy-bear report: you are appreciated. The report is final. 🧸",
+"You make my brain do the happy-loading-screen thing. 💀",
+"Reminder: you don't need to be cheerful every second to deserve love and kindness.",
+"If I could send a hug through the screen, this page would be very crowded.",
+"You are allowed to have hard days. You don't have to handle every feeling perfectly.",
+"I like the little details that make you different from everyone else.",
+"You're cute. This is not an opinion. It is a peer-reviewed teddy-bear fact.",
+"Thank you for the laughs, the talks, and the tiny moments in between.",
+"Your existence has caused a suspicious increase in smiling at my phone.",
+"Sending one imaginary strawberry, two marshmallows, and a very serious hug. 🍓",
+"I hope you always feel safe being silly, soft, honest, and completely yourself.",
+"Today's mission: drink some water, relax your shoulders, and accept this virtual bear.",
+"You deserve gentleness, especially from yourself. 💗",
+"I would like to file a complaint: why are you so far away when hugs exist?",
+"You are the main character in today's extremely low-budget romance movie. 🎬",
+"Your laugh should be preserved in a museum. I will be the unpaid security guard.",
+"If this note were a snack, it would be a strawberry marshmallow. No further questions.",
+"Even when we have nothing exciting to say, I still like talking to you.",
+"You're not required to be perfect to be precious to me.",
+"Your official title today is Princess of the Tiny Universe. 👑",
+"I hope something unexpectedly nice happens to you today.",
+"Attention: your daily dose of appreciation has arrived. Please sign here: 💗",
+"I would absolutely lose a staring contest against your cutest expression.",
+"Thank you for letting me know the real you, not just the polished version.",
+"Sending a pocket-sized cloud to sit beside you if today feels heavy. ☁️",
+"Your weirdness is a feature, not a bug. Signed, the boyfriend IT department.",
+"I like that we have our own little world made of jokes and memories.",
+"Please accept this virtual cupcake as a legally binding token of affection. 🧁",
+"You make distance feel annoying, but you also give me something lovely to look forward to.",
+"You deserve people who listen carefully and treat your feelings gently.",
+"BREAKING: local teddy bear resigns after learning you are cuter than it is.",
+"If you feel low, you don't have to solve your whole life today. One small step is enough.",
+"I love the tiny details about you that you might not even notice yourself.",
+"This note has been inspected and approved by the Department of Hugs. 🤗",
+"Your job is not to make everyone happy. Your feelings matter too.",
+"I would share my imaginary fries with you. That is a very serious commitment. 🍟",
+"May your pillow be cool, your snacks be tasty, and your day be kind.",
+"Somewhere, a tiny cartoon heart is doing backflips because you opened this note.",
+"I hope you laugh so hard today that you forget what the joke was.",
+"Thank you for being part of my year and the memories we're still making.",
+"You're a little sunshine with occasional thunderstorm updates. Both are welcome. ☀️",
+"If affection were a currency, this note would be an aggressively oversized cheque.",
+"You don't have to earn rest. You're allowed to pause.",
+"Imagine a tiny penguin waddling over to give you a flower. 🐧🌷",
+"I like you in your excited, quiet, sleepy, silly, and thoughtful moods.",
+"Your brain deserves a break. This note officially authorizes a five-minute cozy pause.",
+"Your cuteness has been reported to the authorities. They sent back a heart.",
+"Even from far away, little things can make me feel close to you.",
+"I hope you know you can tell me when something bothers you. I want to understand.",
+"Today's forecast: 80% chance of teddy bears, 20% chance of nonsense, 100% affection.",
+"Your feelings don't need to make perfect sense to be worth listening to.",
+"I would name a star after you, but it would probably start demanding snacks. ⭐",
+"You make ordinary words like 'hi' and 'goodnight' feel special.",
+"Reminder from the universe: you are a person, not a productivity machine. Rest, please.",
+"I am sending you a tiny invisible crown. Please wear it with ridiculous confidence. 👑",
+"I like hearing about the random little things that happen in your day.",
+"This is a formal invitation to be cute and chaotic at your own pace.",
+"If I were a teddy bear, I would apply for the position of your desk companion.",
+"You deserve love that feels kind, honest, and safe.",
+"Plot twist: the real treasure was the adorable human reading this note. 💎",
+"I hope you never underestimate how much a small kind word can mean.",
+"You could tell me the most random story and I'd still want the director's cut.",
+"Sending a tiny bouquet made of emojis because the budget is currently zero. 💐",
+"I hope you're proud of the little things you've made it through.",
+"Your sleepy voice would probably make the teddy-bear department melt. 🧸",
+"Remember to eat something nice when you can and take a breath, little human.",
+"You're my favourite kind of plot twist.",
+"If today was a mess, it doesn't mean you are a mess. Tomorrow gets a fresh page.",
+"Consider this note a tiny blanket for your thoughts. 🌙",
+"Your happiness matters, but you don't have to perform happiness for me.",
+"Breaking news: a boy has once again remembered how lucky he is to know you.",
+"I'd send you the moon, but postage is outrageous. Please accept this emoji instead. 🌙",
+"You're allowed to change your mind, grow, learn, and be a work in progress.",
+"Some days the bravest thing is simply being honest about how you feel.",
+"Virtual boop! This message has been delivered by a certified imaginary hamster. 🐹",
+"I hope you get a moment today that feels peaceful and entirely yours.",
+"I like our little traditions, even the ones that make absolutely no sense.",
+"You are not 'too much' for having feelings. You are human, and you matter.",
+"If you were a dessert, you'd be a cupcake with extra sprinkles. Official science. 🧁",
+"Thank you for the moments when we make each other laugh at nonsense.",
+"Here's your reminder to stretch a little and unclench your jaw. Tiny wellness fairy says so.",
+"I hope the next nice thing that happens catches you completely by surprise.",
+"Even when I tease you, I want you to feel respected and cared for.",
+"This note contains one imaginary kitten, two hugs, and a very shy heart. 🐱",
+"I am cheering for the things you care about, even the small things.",
+"May you find a reason to smile that has absolutely nothing to do with me, too. 🌷",
+"If I could bottle a happy memory, I'd label it 'open whenever you need a smile.'",
+"You're a whole person with your own dreams, and I love getting to know you more.",
+"Last note? Not quite. Just a reminder that there are always new little moments ahead.",
+"Devi Ji, thank you for being you. This tiny universe is yours to revisit whenever you want. 💗"
+];
+const envRoot=document.getElementById('envelopes');
+const opened=new Set();
+notes.forEach((note,i)=>{
+ const b=document.createElement('button');
+ b.className='env';b.type='button';b.setAttribute('aria-label','Open love note '+(i+1));
+ b.innerHTML='💌<small>'+String(i+1).padStart(2,'0')+'</small>';
+ b.addEventListener('click',()=>showNote(i,b));
+ envRoot.appendChild(b);
+});
+function showNote(i,b){
+ document.getElementById('noteDisplay').textContent=notes[i];
+ if(b){b.classList.add('opened');b.innerHTML='💗<small>'+String(i+1).padStart(2,'0')+' ✓</small>';opened.add(i);}
+ sparkle(6);
+}
+document.getElementById('randomNote').addEventListener('click',()=>{
+ let i=Math.floor(Math.random()*notes.length);showNote(i,envRoot.children[i]);
+});
+document.getElementById('openGift').addEventListener('click',()=>{
+ document.getElementById('case').scrollIntoView({behavior:'smooth'});sparkle(22);
+});
+document.getElementById('verdictBtn').addEventListener('click',()=>{
+ document.getElementById('verdict').classList.remove('hidden');sparkle(14);
+});
+document.getElementById('heartsTop').addEventListener('click',()=>sparkle(25));
+document.getElementById('finalHearts').addEventListener('click',()=>sparkle(30));
+document.getElementById('finalButton').addEventListener('click',()=>{
+ document.getElementById('finalSecret').classList.remove('hidden');document.getElementById('finalSecret').scrollIntoView({behavior:'smooth',block:'center'});sparkle(25);
+});
+function sparkle(count){
+ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ const symbols=['💗','💕','🎀','💖','✨','🌸'];
+ for(let i=0;i<count;i++){
+  const s=document.createElement('span');s.className='floating';s.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+  s.style.left=Math.random()*100+'vw';s.style.animationDelay=Math.random()*1.2+'s';s.style.fontSize=(16+Math.random()*20)+'px';
+  document.body.appendChild(s);s.addEventListener('animationend',()=>s.remove());
+ }
+}
+[['audioSad','playerSad'],['audioFunny','playerFunny'],['audioMiss','playerMiss'],['audioSecret','playerSecret']].forEach(([inputId,playerId])=>{
+ const input=document.getElementById(inputId),player=document.getElementById(playerId);let oldUrl;
+ input.addEventListener('change',()=>{
+  const file=input.files&&input.files[0];if(!file)return;
+  if(oldUrl)URL.revokeObjectURL(oldUrl);oldUrl=URL.createObjectURL(file);player.src=oldUrl;player.classList.remove('hidden');
+ });
+});
+document.getElementById('savePlaylist').addEventListener('click',()=>{
+ const value=document.getElementById('playlistLink').value.trim();const btn=document.getElementById('playlistButton');
+ try{const url=new URL(value);if(!['http:','https:'].includes(url.protocol))throw Error();btn.href=url.href;btn.classList.remove('hidden');btn.textContent='Open our playlist 💗';}
+ catch(e){alert('Please paste a valid playlist link starting with https://');}
+});
+document.getElementById('addMemory').addEventListener('click',()=>{
+ const title=document.getElementById('memoryTitle').value.trim(),text=document.getElementById('memoryText').value.trim();
+ if(!title||!text){alert('Add a title and a little memory first 💗');return;}
+ const card=document.createElement('div');card.className='playlist-card';
+ const h=document.createElement('h3');h.textContent='📸 '+title;
+ const p=document.createElement('p');p.textContent=text;card.append(h,p);document.getElementById('memoryList').prepend(card);
+ document.getElementById('memoryTitle').value='';document.getElementById('memoryText').value='';
+});
+</script>
+</body>
+</html>
