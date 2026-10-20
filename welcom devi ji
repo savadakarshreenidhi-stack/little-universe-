@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Devi Ji 🎀</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", sans-serif;
+  background: #fff0f6;
+  color: #74334f;
+  text-align: center;
+}
+
+header {
+  padding: 18px;
+  background: #ffc6dc;
+  border-bottom: 3px dashed #f28ab2;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+main {
+  width: min(92%, 650px);
+  margin: 28px auto;
+}
+
+.card {
+  background: #fffafd;
+  border: 2px solid #ffd0e2;
+  border-radius: 28px;
+  padding: 28px 20px;
+  margin: 22px 0;
+  box-shadow: 0 8px 20px #e99db522;
+}
+
+.bear {
+  font-size: 76px;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+h1 {
+  font-size: clamp(28px, 7vw, 42px);
+  color: #d84d87;
+}
+
+h2 {
+  color: #d84d87;
+}
+
+p {
+  line-height: 1.7;
+}
+
+button {
+  border: none;
+  border-radius: 30px;
+  background: #ef79aa;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 14px 20px;
+  margin: 7px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.04);
+}
+
+.secondary {
+  background: #f7d7e6;
+  color: #873b60;
+}
+
+.note {
+  background: #fff0f6;
+  border: 1px dashed #e99ab9;
+  border-radius: 20px;
+  padding: 22px;
+  margin-top: 20px;
+  min-height: 80px;
+}
+
+.hidden {
+  display: none;
+}
+
+.heart {
+  position: fixed;
+  top: -30px;
+  pointer-events: none;
+  animation: fall 5s linear forwards;
+  z-index: 5;
+}
+
+footer {
+  padding: 24px;
+  font-size: 13px;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition: none !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+🎀 THE VERY OFFICIAL DEVI JI FAN CLUB 🎀
+</header>
+
+<main>
+
+<section class="card" id="welcome">
+  <div class="bear">🧸</div>
+  <h1>Helloooo, Devi Ji! 💗</h1>
+
+  <p>
+    A very suspicious teddy bear has delivered a confidential
+    package specifically for you.
+  </p>
+
+  <p><b>WARNING:</b> Excessive cuteness detected. Proceed carefully. 😭</p>
+
+  <button onclick="openGift()">OPEN MY GIFT 🎁</button>
+</section>
+
+<section class="card hidden" id="chaos">
+  <div class="bear">🐻</div>
+  <h2>🚨 IMPORTANT INVESTIGATION 🚨</h2>
+
+  <p>
+    Devi Ji, you are accused of stealing one boy's attention,
+    occupying his thoughts without permission, and being
+    suspiciously adorable.
+  </p>
+
+  <p>The court has reviewed the evidence.</p>
+
+  <button onclick="verdict()">VIEW THE VERDICT ⚖️</button>
+
+  <div class="note hidden" id="verdict">
+    GUILTY. 😭💗
+
+    <br><br>
+
+    Sentence: Unlimited appreciation, silly conversations,
+    and a lifetime membership in the Devi Ji Fan Club.
+  </div>
+</section>
+
+<section class="card hidden" id="notes">
+  <div class="bear">💌</div>
+  <h2>A Little Jar of Feelings</h2>
+
+  <p>
+    Tap the button whenever you want a tiny surprise.
+    Each click opens a different note from me. 🎀
+  </p>
+
+  <button onclick="newNote()">OPEN A LITTLE NOTE 💗</button>
+
+  <div class="note" id="note">
+    Your first surprise is waiting here. 🧸
+  </div>
+</section>
+
+<section class="card hidden" id="final">
+  <div class="bear">🥹💗</div>
+
+  <h2>Okay, Jokes Aside...</h2>
+
+  <p>
+    My adorable Devi Ji,
+  </p>
+
+  <p>
+    We've shared more than a year together, and I still love
+    the little things that make you who you are.
+  </p>
+
+  <p>
+    Your cute side, your silly side, your emotional side,
+    and all those little moments that might seem ordinary
+    to you but mean so much to me.
+  </p>
+
+  <p>
+    I may not always find the perfect words, and I might
+    annoy you more than necessary, but I hope you never
+    forget that you are special to me.
+  </p>
+
+  <p>
+    If this little website makes you smile even for a moment,
+    then making it was worth it. ❤️
+  </p>
+
+  <h2>Made with love, just for Devi Ji. 🎀</h2>
+
+  <button onclick="sprinkleHearts()">MORE HEARTS! 💗</button>
+</section>
+
+</main>
+
+<footer>
+Made with 💗, a little chaos, and absolutely no budget.
+<br>
+Officially approved by the Teddy Bear Department. 🧸
+</footer>
+
+<script>
+const messages = [
+  "Breaking news: Devi Ji is still ridiculously adorable. 🐻",
+  "Your smile deserves its own national holiday. 🎀",
+  "I hope something makes you smile today. And if not, consider this your tiny reminder that you matter. 💗",
+  "You are my favourite notification. Don't let it get to your head. 😭",
+  "Official teddy bear report: You are loved. Investigation complete. 🧸",
+  "If cuteness were a crime, your case would require an entire courtroom. ⚖️",
+  "Thank you for being you. Even your weird little habits are part of what makes you special. 💕",
+  "Sending one virtual hug. Please allow 3–5 business seconds for delivery. 🤗",
+  "You make ordinary conversations feel special. I hope you know that. ❤️",
+  "Tiny reminder: You don't have to be happy every moment. You deserve kindness on difficult days, too. 🌷",
+  "I hope you always feel safe being your completely silly self around me. 🎀",
+  "A teddy bear told me to remind you that you're precious. I don't question teddy bear authority. 🧸"
+];
+
+let lastNote = -1;
+
+function openGift() {
+  document.getElementById("chaos").classList.remove("hidden");
+  document.getElementById("notes").classList.remove("hidden");
+  document.getElementById("final").classList.remove("hidden");
+
+  document.getElementById("welcome").scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+
+  sprinkleHearts();
+}
+
+function verdict() {
+  document.getElementById("verdict").classList.remove("hidden");
+  sprinkleHearts();
+}
+
+function newNote() {
+  let index;
+
+  do {
+    index = Math.floor(Math.random() * messages.length);
+  } while (messages.length > 1 && index === lastNote);
+
+  lastNote = index;
+
+  document.getElementById("note").textContent = messages[index];
+
+  sprinkleHearts();
+}
+
+function sprinkleHearts() {
+  const reducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  if (reducedMotion) return;
+
+  const symbols = ["💗", "💕", "🎀", "💖", "✨"];
+
+  for (let i = 0; i < 16; i++) {
+    const heart = document.createElement("span");
+
+    heart.className = "heart";
+    heart.textContent = symbols[
+      Math.floor(Math.random() * symbols.length)
+    ];
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDelay = Math.random() * 1.5 + "s";
+    heart.style.fontSize = (16 + Math.random() * 18) + "px";
+
+    document.body.appendChild(heart);
+
+    heart.addEventListener("animationend", () => heart.remove());
+  }
+}
+</script>
+
+</body>
+</html>
